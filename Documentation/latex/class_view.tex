@@ -1,0 +1,459 @@
+\hypertarget{class_view}{}\section{View Class Reference}
+\label{class_view}\index{View@{View}}
+
+
+The \hyperlink{class_view}{View} class This class represents the view of the \hyperlink{class_game}{Game}. It handles all the thing that must be displayed such as the board, the different messages for the player.  
+
+
+
+
+{\ttfamily \#include $<$view.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_view_a7c91b725a55a7843fc628e29d85f53a2}{View} (\hyperlink{class_game}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_view}{View} Creates an instance of the class with a predefined \hyperlink{class_game}{Game}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a44ad60a768422d3fa8fbd7576950080a}\label{class_view_a44ad60a768422d3fa8fbd7576950080a}} 
+\hyperlink{class_view_a44ad60a768422d3fa8fbd7576950080a}{View} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_view}{View} Creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_ad0dc854db9aabbea98a334dec89f785c}\label{class_view_ad0dc854db9aabbea98a334dec89f785c}} 
+\hyperlink{class_view_ad0dc854db9aabbea98a334dec89f785c}{$\sim$\+View} ()
+\begin{DoxyCompactList}\small\item\em the destructor. Deletes all the elements of the class that need to be deleted. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a3f47f684fa69af930056c56e4d559c7d}{set\+Game} (\hyperlink{class_game}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em set\+Game Set the attribute game\+\_\+ with the value of the \hyperlink{class_game}{Game} in parameter. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_ac837e4c674546a4bfccbb58250a81f6b}{set\+Controller} (\hyperlink{class_controller}{Controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em set\+Controller Set the attribute controller\+\_\+ with the value of the \hyperlink{class_controller}{Controller} in parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_ab5964dab1ea4bf6d23513e21a212f00a}\label{class_view_ab5964dab1ea4bf6d23513e21a212f00a}} 
+void \hyperlink{class_view_ab5964dab1ea4bf6d23513e21a212f00a}{print\+Board} ()
+\begin{DoxyCompactList}\small\item\em print\+Board Displays the board. \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_aad0487a7cc70e7e03ce8d0dc39c570c4}{is\+Play\+Command} (\textbf{ std\+::vector}$<$ \textbf{ string} $>$ my\+Command)
+\begin{DoxyCompactList}\small\item\em is\+Play\+Command Indicates if the first element of the vector my\+Command is \char`\"{}\+P\+L\+A\+Y\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_a26d427abb478561381207ed8d76d84c4}{is\+Flag\+Command} (\textbf{ std\+::vector}$<$ \textbf{ string} $>$ my\+Command)
+\begin{DoxyCompactList}\small\item\em is\+Flag\+Command Indicates if the first element of the vector my\+Command is \char`\"{}\+F\+L\+A\+G\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_ac3a7757f7c123e73569e3b9bcf89df86}{is\+Exit\+Command} (\textbf{ std\+::vector}$<$ \textbf{ string} $>$ my\+Command)
+\begin{DoxyCompactList}\small\item\em is\+Exit\+Command Indicates if the first element of the vector my\+Command is \char`\"{}\+F\+L\+A\+G\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_aabe180bf6a2b9b597fb49107f609215a}{is\+Auto\+Command} (\textbf{ std\+::vector}$<$ \textbf{ string} $>$ my\+Command)
+\begin{DoxyCompactList}\small\item\em is\+Auto\+Command Indicates if the first element of the vextor my\+Command is \char`\"{}\+A\+U\+T\+O\char`\"{} \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_a203e416b63702c5278f471508a8b60e8}{is\+Bonus\+Command} (\textbf{ std\+::vector}$<$ \textbf{ string} $>$ my\+Command)
+\begin{DoxyCompactList}\small\item\em is\+Bonus\+Command Indicates if the first element of the vextor my\+Command is \char`\"{}\+B\+O\+N\+U\+S\char`\"{} \end{DoxyCompactList}\item 
+\textbf{ std\+::string} \hyperlink{class_view_ae372864497e82f1abe7a3fc916af0d52}{ask\+Username} ()
+\begin{DoxyCompactList}\small\item\em ask\+Username Asks the user its name. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \textbf{ std\+::string} $>$ \hyperlink{class_view_a12e92a6bdfb8a88d1e8e6b334f45ccc2}{ask\+Command} ()
+\begin{DoxyCompactList}\small\item\em ask\+Command Asks the user what he wants to play. \textquotesingle{}P\+L\+AY row col\textquotesingle{} or \textquotesingle{}F\+L\+AG row col\textquotesingle{}. It then convert this string in vector of string by splitting it where there are spaces in the string. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \textbf{ std\+::string} $>$ \hyperlink{class_view_a543e9350656082efdb604ed224e65aa1}{ask\+Init\+Command} ()
+\begin{DoxyCompactList}\small\item\em ask\+Init\+Command Asks the user what he wants to play for the first play. By default, the first case can not contain a bomb. Plus, since it\textquotesingle{}s the first play, it makes no sense to flag a case so the player has to play with the command \textquotesingle{}P\+L\+AY row col\textquotesingle{}. It then convert this string in vector of string by splitting it where there are spaces in the string. \end{DoxyCompactList}\item 
+int \hyperlink{class_view_acbe5ecf3c0bdcd0971ba65fb8192ac6d}{ask\+Nb\+Row} (int val\+Max)
+\begin{DoxyCompactList}\small\item\em ask\+Nb\+Row Asks the user the number of row he wants for the board of its game. \end{DoxyCompactList}\item 
+int \hyperlink{class_view_a09d71faa86480f94e129fdf98cc7b0e0}{ask\+Nb\+Column} (int val\+Max)
+\begin{DoxyCompactList}\small\item\em ask\+Nb\+Column Asks the user the number of column he wants for the board of its game. \end{DoxyCompactList}\item 
+double \hyperlink{class_view_ada30dc373b340ac38470139af634f51c}{ask\+Nb\+Bomb} (int val\+Max)
+\begin{DoxyCompactList}\small\item\em ask\+Nb\+Bomb Asks the user the number of bombs he wants for the board of its game to contain. \end{DoxyCompactList}\item 
+\hyperlink{class_game}{Game} $\ast$ \hyperlink{class_view_a5ee79a88b93db7f3be74ece8aeeb492a}{get\+Game} ()
+\begin{DoxyCompactList}\small\item\em get\+Game Returns the modellinked to the view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a65d71e0b2fefdd22cb097137cd501f38}\label{class_view_a65d71e0b2fefdd22cb097137cd501f38}} 
+void \hyperlink{class_view_a65d71e0b2fefdd22cb097137cd501f38}{display\+Lost\+Msg} ()
+\begin{DoxyCompactList}\small\item\em display\+Lost\+Msg Displays a message when the player has lost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a5cd02462388990e81f6372280ff85b9f}\label{class_view_a5cd02462388990e81f6372280ff85b9f}} 
+void \hyperlink{class_view_a5cd02462388990e81f6372280ff85b9f}{display\+Win\+Msg} (int sec)
+\begin{DoxyCompactList}\small\item\em display\+Win\+Msg Displays a message when the player has won. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_abfc9cf460ab368e82669bfb465a76efc}\label{class_view_abfc9cf460ab368e82669bfb465a76efc}} 
+void \hyperlink{class_view_abfc9cf460ab368e82669bfb465a76efc}{display\+Error\+Msg} ()
+\begin{DoxyCompactList}\small\item\em display\+Error\+Msg Displays a message when the player does something wrong. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a4684e5cb232e13c80d86b1c98deb416d}\label{class_view_a4684e5cb232e13c80d86b1c98deb416d}} 
+void \hyperlink{class_view_a4684e5cb232e13c80d86b1c98deb416d}{display\+Title} ()
+\begin{DoxyCompactList}\small\item\em display\+Title Displays the title of the game Demineur. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a52ce6dec383d190722866c0c95175cbc}{display\+Time} (int sec)
+\begin{DoxyCompactList}\small\item\em display\+Time Displays the time, the number of seconds it has been since the beginning of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a2ebe106edbe9a2e542a3fadfacf83e0e}\label{class_view_a2ebe106edbe9a2e542a3fadfacf83e0e}} 
+void \hyperlink{class_view_a2ebe106edbe9a2e542a3fadfacf83e0e}{display\+Add\+Score} ()
+\begin{DoxyCompactList}\small\item\em display\+Add\+Score Displays a message that tells the user its score has been saved into the top5. Its time is amongst the best five all time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a6285efb26a0b69d91f10b6619707c987}\label{class_view_a6285efb26a0b69d91f10b6619707c987}} 
+void \hyperlink{class_view_a6285efb26a0b69d91f10b6619707c987}{display\+Loser} ()
+\begin{DoxyCompactList}\small\item\em display\+Loser Displays a message that tells the user its score is not good enough to be included in the top5. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a0dac30dd1c0efc45d2918ee9ed43f155}{display\+Top} (\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ top, int height, int width, int nb\+Bomb)
+\begin{DoxyCompactList}\small\item\em display\+Top Displays the list of the best 5 scores (name of the player and time) for a given \hyperlink{struct_board_type}{Board\+Type} \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_a8c735d0d8eba27cee9e4ea10d2161905}{configure} ()
+\begin{DoxyCompactList}\small\item\em configure Asks the player if he wants to configure the board or play with the default board. \end{DoxyCompactList}\item 
+bool \hyperlink{class_view_afb916cc64d0666923a67065771907fe3}{replay} ()
+\begin{DoxyCompactList}\small\item\em replay Asks the player if he wants to replay directly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_af5ee195440e4674c324a5b08e7056fba}\label{class_view_af5ee195440e4674c324a5b08e7056fba}} 
+void \hyperlink{class_view_af5ee195440e4674c324a5b08e7056fba}{display\+Not\+Fair\+Msg} ()
+\begin{DoxyCompactList}\small\item\em display\+Not\+Fair\+Msg Displays a message that tells the user he needs to at list play twice to enter the top. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_a64dc507a5155d043b399d34c0fd4ab97}{update} (int id\+Notif)
+\begin{DoxyCompactList}\small\item\em update Updates the view according to the id it gets in parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a809c631664c18f95f52af5efc0b51dda}\label{class_view_a809c631664c18f95f52af5efc0b51dda}} 
+void \hyperlink{class_view_a809c631664c18f95f52af5efc0b51dda}{init\+Name} ()
+\begin{DoxyCompactList}\small\item\em init\+Name Set the name of the player and print the title D\+E\+M\+I\+N\+E\+UR; \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_aced0413d06ab5e21696039ee19b4a55f}\label{class_view_aced0413d06ab5e21696039ee19b4a55f}} 
+\hyperlink{class_game}{Game} \hyperlink{class_view_aced0413d06ab5e21696039ee19b4a55f}{init\+Game} ()
+\begin{DoxyCompactList}\small\item\em init\+Game Ask the player what value he wants for the nb of row, columns and bombs and then ask the controller to create a game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a73e6d56f37c8bb899acd9328ed01ae1f}\label{class_view_a73e6d56f37c8bb899acd9328ed01ae1f}} 
+void \hyperlink{class_view_a73e6d56f37c8bb899acd9328ed01ae1f}{play\+Demineur} ()
+\begin{DoxyCompactList}\small\item\em play\+Demineur Simulates a game of Demineur from start to finish. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_view_a7db74958dcf7697ec08a1977cb7ed82b}\label{class_view_a7db74958dcf7697ec08a1977cb7ed82b}} 
+int {\bfseries to\+Int} (\textbf{ std\+::string} str)
+\item 
+\mbox{\Hypertarget{class_view_adc8346fb19f74fd0232b36a79878c06b}\label{class_view_adc8346fb19f74fd0232b36a79878c06b}} 
+void {\bfseries display\+Bonus\+Error\+Msg} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_view_aa7cd2209f94372357b26b489575044fa}\label{class_view_aa7cd2209f94372357b26b489575044fa}} 
+\hyperlink{class_game}{Game} $\ast$ \hyperlink{class_view_aa7cd2209f94372357b26b489575044fa}{game\+\_\+}
+\begin{DoxyCompactList}\small\item\em game\+\_\+ The model of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_view_a61e30639a8c0f510c0f6d15700d72e30}\label{class_view_a61e30639a8c0f510c0f6d15700d72e30}} 
+\hyperlink{class_controller}{Controller} $\ast$ \hyperlink{class_view_a61e30639a8c0f510c0f6d15700d72e30}{controller\+\_\+}
+\begin{DoxyCompactList}\small\item\em controller\+\_\+ The controller of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_view}{View} class This class represents the view of the \hyperlink{class_game}{Game}. It handles all the thing that must be displayed such as the board, the different messages for the player. 
+
+Definition at line 21 of file view.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_view_a7c91b725a55a7843fc628e29d85f53a2}\label{class_view_a7c91b725a55a7843fc628e29d85f53a2}} 
+\index{View@{View}!View@{View}}
+\index{View@{View}!View@{View}}
+\subsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily View\+::\+View (\begin{DoxyParamCaption}\item[{\hyperlink{class_game}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_view}{View} Creates an instance of the class with a predefined \hyperlink{class_game}{Game}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the model that will be linked to the view. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_a12e92a6bdfb8a88d1e8e6b334f45ccc2}\label{class_view_a12e92a6bdfb8a88d1e8e6b334f45ccc2}} 
+\index{View@{View}!ask\+Command@{ask\+Command}}
+\index{ask\+Command@{ask\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{ask\+Command()}{askCommand()}}
+{\footnotesize\ttfamily \textbf{ std\+::vector}$<$\textbf{ std\+::string}$>$ View\+::ask\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ask\+Command Asks the user what he wants to play. \textquotesingle{}P\+L\+AY row col\textquotesingle{} or \textquotesingle{}F\+L\+AG row col\textquotesingle{}. It then convert this string in vector of string by splitting it where there are spaces in the string. 
+
+\begin{DoxyReturn}{Returns}
+a vector of string that represents the command entered by the user. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_a543e9350656082efdb604ed224e65aa1}\label{class_view_a543e9350656082efdb604ed224e65aa1}} 
+\index{View@{View}!ask\+Init\+Command@{ask\+Init\+Command}}
+\index{ask\+Init\+Command@{ask\+Init\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{ask\+Init\+Command()}{askInitCommand()}}
+{\footnotesize\ttfamily \textbf{ std\+::vector}$<$\textbf{ std\+::string}$>$ View\+::ask\+Init\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ask\+Init\+Command Asks the user what he wants to play for the first play. By default, the first case can not contain a bomb. Plus, since it\textquotesingle{}s the first play, it makes no sense to flag a case so the player has to play with the command \textquotesingle{}P\+L\+AY row col\textquotesingle{}. It then convert this string in vector of string by splitting it where there are spaces in the string. 
+
+\begin{DoxyReturn}{Returns}
+a vector of string that represents the command entered by the user. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_ada30dc373b340ac38470139af634f51c}\label{class_view_ada30dc373b340ac38470139af634f51c}} 
+\index{View@{View}!ask\+Nb\+Bomb@{ask\+Nb\+Bomb}}
+\index{ask\+Nb\+Bomb@{ask\+Nb\+Bomb}!View@{View}}
+\subsubsection{\texorpdfstring{ask\+Nb\+Bomb()}{askNbBomb()}}
+{\footnotesize\ttfamily double View\+::ask\+Nb\+Bomb (\begin{DoxyParamCaption}\item[{int}]{val\+Max }\end{DoxyParamCaption})}
+
+
+
+ask\+Nb\+Bomb Asks the user the number of bombs he wants for the board of its game to contain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+Max} & the maximum number of bombs the board can contain. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an int representing the number of bombs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_a09d71faa86480f94e129fdf98cc7b0e0}\label{class_view_a09d71faa86480f94e129fdf98cc7b0e0}} 
+\index{View@{View}!ask\+Nb\+Column@{ask\+Nb\+Column}}
+\index{ask\+Nb\+Column@{ask\+Nb\+Column}!View@{View}}
+\subsubsection{\texorpdfstring{ask\+Nb\+Column()}{askNbColumn()}}
+{\footnotesize\ttfamily int View\+::ask\+Nb\+Column (\begin{DoxyParamCaption}\item[{int}]{val\+Max }\end{DoxyParamCaption})}
+
+
+
+ask\+Nb\+Column Asks the user the number of column he wants for the board of its game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+Max} & the maximum number of column the board can have. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an int representing the number of column. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_acbe5ecf3c0bdcd0971ba65fb8192ac6d}\label{class_view_acbe5ecf3c0bdcd0971ba65fb8192ac6d}} 
+\index{View@{View}!ask\+Nb\+Row@{ask\+Nb\+Row}}
+\index{ask\+Nb\+Row@{ask\+Nb\+Row}!View@{View}}
+\subsubsection{\texorpdfstring{ask\+Nb\+Row()}{askNbRow()}}
+{\footnotesize\ttfamily int View\+::ask\+Nb\+Row (\begin{DoxyParamCaption}\item[{int}]{val\+Max }\end{DoxyParamCaption})}
+
+
+
+ask\+Nb\+Row Asks the user the number of row he wants for the board of its game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+Max} & the maximum number of row the board can have. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an int representing the number of row. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_ae372864497e82f1abe7a3fc916af0d52}\label{class_view_ae372864497e82f1abe7a3fc916af0d52}} 
+\index{View@{View}!ask\+Username@{ask\+Username}}
+\index{ask\+Username@{ask\+Username}!View@{View}}
+\subsubsection{\texorpdfstring{ask\+Username()}{askUsername()}}
+{\footnotesize\ttfamily \textbf{ std\+::string} View\+::ask\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ask\+Username Asks the user its name. 
+
+\begin{DoxyReturn}{Returns}
+the string entered by the user. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_a8c735d0d8eba27cee9e4ea10d2161905}\label{class_view_a8c735d0d8eba27cee9e4ea10d2161905}} 
+\index{View@{View}!configure@{configure}}
+\index{configure@{configure}!View@{View}}
+\subsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily bool View\+::configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+configure Asks the player if he wants to configure the board or play with the default board. 
+
+\begin{DoxyReturn}{Returns}
+true if he wants to configure the board, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_a52ce6dec383d190722866c0c95175cbc}\label{class_view_a52ce6dec383d190722866c0c95175cbc}} 
+\index{View@{View}!display\+Time@{display\+Time}}
+\index{display\+Time@{display\+Time}!View@{View}}
+\subsubsection{\texorpdfstring{display\+Time()}{displayTime()}}
+{\footnotesize\ttfamily void View\+::display\+Time (\begin{DoxyParamCaption}\item[{int}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+display\+Time Displays the time, the number of seconds it has been since the beginning of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sec} & an int representing the number of seconds it has been since the beginning of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 312 of file view.\+h.
+
+\mbox{\Hypertarget{class_view_a0dac30dd1c0efc45d2918ee9ed43f155}\label{class_view_a0dac30dd1c0efc45d2918ee9ed43f155}} 
+\index{View@{View}!display\+Top@{display\+Top}}
+\index{display\+Top@{display\+Top}!View@{View}}
+\subsubsection{\texorpdfstring{display\+Top()}{displayTop()}}
+{\footnotesize\ttfamily void View\+::display\+Top (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$}]{top,  }\item[{int}]{height,  }\item[{int}]{width,  }\item[{int}]{nb\+Bomb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+display\+Top Displays the list of the best 5 scores (name of the player and time) for a given \hyperlink{struct_board_type}{Board\+Type} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & a vector of 5 scores (the best 5). \\
+\hline
+{\em height,the} & height of the board. \\
+\hline
+{\em width,the} & width of the board. \\
+\hline
+{\em nb\+Bomb,the} & number of bombs in the board. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 334 of file view.\+h.
+
+\mbox{\Hypertarget{class_view_a5ee79a88b93db7f3be74ece8aeeb492a}\label{class_view_a5ee79a88b93db7f3be74ece8aeeb492a}} 
+\index{View@{View}!get\+Game@{get\+Game}}
+\index{get\+Game@{get\+Game}!View@{View}}
+\subsubsection{\texorpdfstring{get\+Game()}{getGame()}}
+{\footnotesize\ttfamily \hyperlink{class_game}{Game} $\ast$ View\+::get\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Game Returns the modellinked to the view. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_game}{Game}, the model linked to the view. 
+\end{DoxyReturn}
+
+
+Definition at line 290 of file view.\+h.
+
+\mbox{\Hypertarget{class_view_aabe180bf6a2b9b597fb49107f609215a}\label{class_view_aabe180bf6a2b9b597fb49107f609215a}} 
+\index{View@{View}!is\+Auto\+Command@{is\+Auto\+Command}}
+\index{is\+Auto\+Command@{is\+Auto\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{is\+Auto\+Command()}{isAutoCommand()}}
+{\footnotesize\ttfamily bool View\+::is\+Auto\+Command (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \textbf{ string} $>$}]{my\+Command }\end{DoxyParamCaption})}
+
+
+
+is\+Auto\+Command Indicates if the first element of the vextor my\+Command is \char`\"{}\+A\+U\+T\+O\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Command} & a vector of String. Actually it is a string split in a vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first element is \char`\"{}\+A\+U\+T\+O\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_a203e416b63702c5278f471508a8b60e8}\label{class_view_a203e416b63702c5278f471508a8b60e8}} 
+\index{View@{View}!is\+Bonus\+Command@{is\+Bonus\+Command}}
+\index{is\+Bonus\+Command@{is\+Bonus\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{is\+Bonus\+Command()}{isBonusCommand()}}
+{\footnotesize\ttfamily bool View\+::is\+Bonus\+Command (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \textbf{ string} $>$}]{my\+Command }\end{DoxyParamCaption})}
+
+
+
+is\+Bonus\+Command Indicates if the first element of the vextor my\+Command is \char`\"{}\+B\+O\+N\+U\+S\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Command} & a vector of String. Actually it is a string split in a vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first element is \char`\"{}\+B\+O\+N\+U\+S\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_ac3a7757f7c123e73569e3b9bcf89df86}\label{class_view_ac3a7757f7c123e73569e3b9bcf89df86}} 
+\index{View@{View}!is\+Exit\+Command@{is\+Exit\+Command}}
+\index{is\+Exit\+Command@{is\+Exit\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{is\+Exit\+Command()}{isExitCommand()}}
+{\footnotesize\ttfamily bool View\+::is\+Exit\+Command (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \textbf{ string} $>$}]{my\+Command }\end{DoxyParamCaption})}
+
+
+
+is\+Exit\+Command Indicates if the first element of the vector my\+Command is \char`\"{}\+F\+L\+A\+G\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Command} & a vector of String. Actually it is a string split in a vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first element is \char`\"{}\+F\+L\+A\+G\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_a26d427abb478561381207ed8d76d84c4}\label{class_view_a26d427abb478561381207ed8d76d84c4}} 
+\index{View@{View}!is\+Flag\+Command@{is\+Flag\+Command}}
+\index{is\+Flag\+Command@{is\+Flag\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{is\+Flag\+Command()}{isFlagCommand()}}
+{\footnotesize\ttfamily bool View\+::is\+Flag\+Command (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \textbf{ string} $>$}]{my\+Command }\end{DoxyParamCaption})}
+
+
+
+is\+Flag\+Command Indicates if the first element of the vector my\+Command is \char`\"{}\+F\+L\+A\+G\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Command} & a vector of String. Actually it is a string split in a vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first element is \char`\"{}\+F\+L\+A\+G\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_aad0487a7cc70e7e03ce8d0dc39c570c4}\label{class_view_aad0487a7cc70e7e03ce8d0dc39c570c4}} 
+\index{View@{View}!is\+Play\+Command@{is\+Play\+Command}}
+\index{is\+Play\+Command@{is\+Play\+Command}!View@{View}}
+\subsubsection{\texorpdfstring{is\+Play\+Command()}{isPlayCommand()}}
+{\footnotesize\ttfamily bool View\+::is\+Play\+Command (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \textbf{ string} $>$}]{my\+Command }\end{DoxyParamCaption})}
+
+
+
+is\+Play\+Command Indicates if the first element of the vector my\+Command is \char`\"{}\+P\+L\+A\+Y\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Command} & a vector of String. Actually it is a string split in a vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first element is \char`\"{}\+P\+L\+A\+Y\char`\"{}, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_afb916cc64d0666923a67065771907fe3}\label{class_view_afb916cc64d0666923a67065771907fe3}} 
+\index{View@{View}!replay@{replay}}
+\index{replay@{replay}!View@{View}}
+\subsubsection{\texorpdfstring{replay()}{replay()}}
+{\footnotesize\ttfamily bool View\+::replay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+replay Asks the player if he wants to replay directly. 
+
+\begin{DoxyReturn}{Returns}
+true if he decides to replay, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_view_ac837e4c674546a4bfccbb58250a81f6b}\label{class_view_ac837e4c674546a4bfccbb58250a81f6b}} 
+\index{View@{View}!set\+Controller@{set\+Controller}}
+\index{set\+Controller@{set\+Controller}!View@{View}}
+\subsubsection{\texorpdfstring{set\+Controller()}{setController()}}
+{\footnotesize\ttfamily void View\+::set\+Controller (\begin{DoxyParamCaption}\item[{\hyperlink{class_controller}{Controller} $\ast$}]{controller }\end{DoxyParamCaption})}
+
+
+
+set\+Controller Set the attribute controller\+\_\+ with the value of the \hyperlink{class_controller}{Controller} in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & the controller that will give its value to the current one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_a3f47f684fa69af930056c56e4d559c7d}\label{class_view_a3f47f684fa69af930056c56e4d559c7d}} 
+\index{View@{View}!set\+Game@{set\+Game}}
+\index{set\+Game@{set\+Game}!View@{View}}
+\subsubsection{\texorpdfstring{set\+Game()}{setGame()}}
+{\footnotesize\ttfamily void View\+::set\+Game (\begin{DoxyParamCaption}\item[{\hyperlink{class_game}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+set\+Game Set the attribute game\+\_\+ with the value of the \hyperlink{class_game}{Game} in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & the game that will give its value to the current one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_a64dc507a5155d043b399d34c0fd4ab97}\label{class_view_a64dc507a5155d043b399d34c0fd4ab97}} 
+\index{View@{View}!update@{update}}
+\index{update@{update}!View@{View}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void View\+::update (\begin{DoxyParamCaption}\item[{int}]{id\+Notif }\end{DoxyParamCaption})}
+
+
+
+update Updates the view according to the id it gets in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Notif} & an int representing the way the view has to update itself. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Application/view.\+h\end{DoxyCompactItemize}

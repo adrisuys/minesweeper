@@ -1,0 +1,235 @@
+\hypertarget{class_board}{}\section{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+
+
+The \hyperlink{class_board}{Board} class This class represents a board.  
+
+
+
+
+{\ttfamily \#include $<$board.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_board_ad42b2461203bc38788e8f3488a6a7636}{Board} (const \hyperlink{struct_board_type}{Board\+Type} \&btype)
+\begin{DoxyCompactList}\small\item\em the constructor It creates an instance of the class using a predefined \hyperlink{struct_board_type}{Board\+Type}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ae87b63aa7c19a7ef82f6d70cbb9c7646}\label{class_board_ae87b63aa7c19a7ef82f6d70cbb9c7646}} 
+\hyperlink{class_board_ae87b63aa7c19a7ef82f6d70cbb9c7646}{Board} ()=default
+\begin{DoxyCompactList}\small\item\em the constructor It creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_af73f45730119a1fd8f6670f53f959e68}\label{class_board_af73f45730119a1fd8f6670f53f959e68}} 
+\hyperlink{class_board_af73f45730119a1fd8f6670f53f959e68}{$\sim$\+Board} ()
+\begin{DoxyCompactList}\small\item\em the destructor It deletes all the elements from \hyperlink{class_board}{Board} that need to be deleted. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a5667cea4135532fa7666bf7f5cf6e71b}{set\+Board\+Type} (\hyperlink{struct_board_type}{Board\+Type} btype)
+\begin{DoxyCompactList}\small\item\em the setter of \hyperlink{struct_board_type}{Board\+Type}. Changes the values of the \hyperlink{struct_board_type}{Board\+Type} with the value of the one in parameter. \end{DoxyCompactList}\item 
+\hyperlink{struct_board_type}{Board\+Type} \& \hyperlink{class_board_a30189580d1e2627fc32b40a33db9c5a5}{get\+Board\+Type} ()
+\begin{DoxyCompactList}\small\item\em the getter of \hyperlink{struct_board_type}{Board\+Type}. Returns the \hyperlink{struct_board_type}{Board\+Type}. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \textbf{ std\+::vector}$<$ \hyperlink{class_case}{Case} $>$ $>$ \& \hyperlink{class_board_af801e2935f37e23a3714d034e231a5ba}{get\+Board} ()
+\begin{DoxyCompactList}\small\item\em the getter of the board. Returns the board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a305b154a3ac53d119fc78efe053f4745}\label{class_board_a305b154a3ac53d119fc78efe053f4745}} 
+void \hyperlink{class_board_a305b154a3ac53d119fc78efe053f4745}{unveil\+All} ()
+\begin{DoxyCompactList}\small\item\em unveill all the cases of the board. It sets to visible all the cases. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a182d0e797d7482a9091989b16dbcbee9}{set\+Bombs\+In\+Table} (int col, int row)
+\begin{DoxyCompactList}\small\item\em puts all the bombs in the board. It randomly chooses X cases, X being the number of bombs, and puts a bomb on them. The case defined by col and row can not contain a bomb. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ada048789b3d9e13aaa52f4b8d1a72b50}\label{class_board_ada048789b3d9e13aaa52f4b8d1a72b50}} 
+void \hyperlink{class_board_ada048789b3d9e13aaa52f4b8d1a72b50}{fill\+Board} ()
+\begin{DoxyCompactList}\small\item\em fills all the case of the square that does not contain a bomb. Those have been previously filled. So it will set the content of the different cases. The content represents the number of bombs that are around those cases. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_a472731150e19ecdd2d71bcc098037eb8}{is\+Won} ()
+\begin{DoxyCompactList}\small\item\em states if the game is won. It is won if all the non-\/bomb cases are unveiled. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a1d4e828a0cc3b85ba3f86534e76e2f84}{put\+Flag} (int i, int j)
+\begin{DoxyCompactList}\small\item\em puts a flag on the case indicated by i and j. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_a47700b8c7c08c2843e200594e620f2fa}{play} (int i, int j)
+\begin{DoxyCompactList}\small\item\em unveil the case indicated by i and j. \end{DoxyCompactList}\item 
+\hyperlink{class_case}{Case} \hyperlink{class_board_a66b4889df2323241f10aca4b1d38bdf5}{activate\+Bonus} ()
+\begin{DoxyCompactList}\small\item\em activate\+Bonus Selects randomly a case that will be unveil for the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_board}{Board} class This class represents a board. 
+
+Definition at line 12 of file board.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_ad42b2461203bc38788e8f3488a6a7636}\label{class_board_ad42b2461203bc38788e8f3488a6a7636}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{btype }\end{DoxyParamCaption})}
+
+
+
+the constructor It creates an instance of the class using a predefined \hyperlink{struct_board_type}{Board\+Type}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em btype} & the type of the board. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file board.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_a66b4889df2323241f10aca4b1d38bdf5}\label{class_board_a66b4889df2323241f10aca4b1d38bdf5}} 
+\index{Board@{Board}!activate\+Bonus@{activate\+Bonus}}
+\index{activate\+Bonus@{activate\+Bonus}!Board@{Board}}
+\subsubsection{\texorpdfstring{activate\+Bonus()}{activateBonus()}}
+{\footnotesize\ttfamily \hyperlink{class_case}{Case} Board\+::activate\+Bonus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+activate\+Bonus Selects randomly a case that will be unveil for the user. 
+
+\begin{DoxyReturn}{Returns}
+the case which the computer will reveal for the user. 
+\end{DoxyReturn}
+
+
+Definition at line 191 of file board.\+cpp.
+
+\mbox{\Hypertarget{class_board_af801e2935f37e23a3714d034e231a5ba}\label{class_board_af801e2935f37e23a3714d034e231a5ba}} 
+\index{Board@{Board}!get\+Board@{get\+Board}}
+\index{get\+Board@{get\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+Board()}{getBoard()}}
+{\footnotesize\ttfamily \textbf{ std\+::vector}$<$ \textbf{ std\+::vector}$<$ \hyperlink{class_case}{Case} $>$ $>$ \& Board\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+the getter of the board. Returns the board. 
+
+\begin{DoxyReturn}{Returns}
+a vector of \hyperlink{class_case}{Case}. 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file board.\+h.
+
+\mbox{\Hypertarget{class_board_a30189580d1e2627fc32b40a33db9c5a5}\label{class_board_a30189580d1e2627fc32b40a33db9c5a5}} 
+\index{Board@{Board}!get\+Board\+Type@{get\+Board\+Type}}
+\index{get\+Board\+Type@{get\+Board\+Type}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+Board\+Type()}{getBoardType()}}
+{\footnotesize\ttfamily \hyperlink{struct_board_type}{Board\+Type} \& Board\+::get\+Board\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+the getter of \hyperlink{struct_board_type}{Board\+Type}. Returns the \hyperlink{struct_board_type}{Board\+Type}. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_board_type}{Board\+Type}. 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file board.\+h.
+
+\mbox{\Hypertarget{class_board_a472731150e19ecdd2d71bcc098037eb8}\label{class_board_a472731150e19ecdd2d71bcc098037eb8}} 
+\index{Board@{Board}!is\+Won@{is\+Won}}
+\index{is\+Won@{is\+Won}!Board@{Board}}
+\subsubsection{\texorpdfstring{is\+Won()}{isWon()}}
+{\footnotesize\ttfamily bool Board\+::is\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+states if the game is won. It is won if all the non-\/bomb cases are unveiled. 
+
+\begin{DoxyReturn}{Returns}
+true if it is won, false otherweise. 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file board.\+cpp.
+
+\mbox{\Hypertarget{class_board_a47700b8c7c08c2843e200594e620f2fa}\label{class_board_a47700b8c7c08c2843e200594e620f2fa}} 
+\index{Board@{Board}!play@{play}}
+\index{play@{play}!Board@{Board}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily bool Board\+::play (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+unveil the case indicated by i and j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the row. \\
+\hline
+{\em j} & the column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the case is a bomb, true otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file board.\+cpp.
+
+\mbox{\Hypertarget{class_board_a1d4e828a0cc3b85ba3f86534e76e2f84}\label{class_board_a1d4e828a0cc3b85ba3f86534e76e2f84}} 
+\index{Board@{Board}!put\+Flag@{put\+Flag}}
+\index{put\+Flag@{put\+Flag}!Board@{Board}}
+\subsubsection{\texorpdfstring{put\+Flag()}{putFlag()}}
+{\footnotesize\ttfamily void Board\+::put\+Flag (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+puts a flag on the case indicated by i and j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the row. \\
+\hline
+{\em j} & the column. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file board.\+cpp.
+
+\mbox{\Hypertarget{class_board_a5667cea4135532fa7666bf7f5cf6e71b}\label{class_board_a5667cea4135532fa7666bf7f5cf6e71b}} 
+\index{Board@{Board}!set\+Board\+Type@{set\+Board\+Type}}
+\index{set\+Board\+Type@{set\+Board\+Type}!Board@{Board}}
+\subsubsection{\texorpdfstring{set\+Board\+Type()}{setBoardType()}}
+{\footnotesize\ttfamily void Board\+::set\+Board\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{struct_board_type}{Board\+Type}}]{btype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+the setter of \hyperlink{struct_board_type}{Board\+Type}. Changes the values of the \hyperlink{struct_board_type}{Board\+Type} with the value of the one in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em btype} & the new \hyperlink{struct_board_type}{Board\+Type} from which the value are taken. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 134 of file board.\+h.
+
+\mbox{\Hypertarget{class_board_a182d0e797d7482a9091989b16dbcbee9}\label{class_board_a182d0e797d7482a9091989b16dbcbee9}} 
+\index{Board@{Board}!set\+Bombs\+In\+Table@{set\+Bombs\+In\+Table}}
+\index{set\+Bombs\+In\+Table@{set\+Bombs\+In\+Table}!Board@{Board}}
+\subsubsection{\texorpdfstring{set\+Bombs\+In\+Table()}{setBombsInTable()}}
+{\footnotesize\ttfamily void Board\+::set\+Bombs\+In\+Table (\begin{DoxyParamCaption}\item[{int}]{col,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+puts all the bombs in the board. It randomly chooses X cases, X being the number of bombs, and puts a bomb on them. The case defined by col and row can not contain a bomb. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & the given column. \\
+\hline
+{\em row} & the given row. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file board.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/board.\+h\item 
+Application/board.\+cpp\end{DoxyCompactItemize}

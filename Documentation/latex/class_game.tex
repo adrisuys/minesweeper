@@ -1,0 +1,325 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+The \hyperlink{class_game}{Game} class It represents the model of the application, it handles all the functionality of the game Demineur.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_a4db83a8aaf9743aa8f15d6e3c03d9e40}{Game} (const \hyperlink{class_board}{Board} \&board)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game}{Game} the constructor Instantiates an instance of the class with predefined \hyperlink{class_board}{Board} and Player. \end{DoxyCompactList}\item 
+\hyperlink{class_game_ae130acf9aed6f46c32802fb6da8187b1}{Game} (int length, int width, int nb\+Bombs)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game}{Game} the constructor Instantiates an instance of the class with predefined lenght and width to set the board\textquotesingle{}s dimension, a number of bombs and the name of the player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a4735989677c1cab18866f3ae4ee0aa1c}\label{class_game_a4735989677c1cab18866f3ae4ee0aa1c}} 
+\hyperlink{class_game_a4735989677c1cab18866f3ae4ee0aa1c}{Game} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_game}{Game}, the constructor Creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game} ()
+\begin{DoxyCompactList}\small\item\em the destructor Deletes all the element from the class that need to be deleted. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a1e71702da13cf28f77ab870b417a6866}{init} (int i, int j)
+\begin{DoxyCompactList}\small\item\em init Initializes the \hyperlink{class_game}{Game} by \end{DoxyCompactList}\item 
+\hyperlink{class_board}{Board} \& \hyperlink{class_game_abb01bda7e2fecca8571706abec4bc3dd}{get\+Board} ()
+\begin{DoxyCompactList}\small\item\em get\+Board Returns the board of the game. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a1cb2f9034bb550c3debfced46b945d11}{is\+Instantiated} ()
+\begin{DoxyCompactList}\small\item\em is\+Instantiated Indicates if the game has been instantiated or not. \end{DoxyCompactList}\item 
+\textbf{ std\+::chrono\+::time\+\_\+point}$<$ \textbf{ std\+::chrono\+::system\+\_\+clock} $>$ \& \hyperlink{class_game_a85755ec9e90fdb122c9b93c706668f1a}{get\+Start\+Time} ()
+\begin{DoxyCompactList}\small\item\em get\+Start\+Time Returns the starting time of the game. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_ab8536df425c768f3524c87de99aa9cd9}{is\+Over} ()
+\begin{DoxyCompactList}\small\item\em is\+Over Indicates if the game is over or not. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a5423ce2b75acf6435cdea79c8c2b2112}{unveil\+All} ()
+\begin{DoxyCompactList}\small\item\em operator = Assign the values of a game to the current one. \end{DoxyCompactList}\item 
+int \hyperlink{class_game_aba2ee6adbc00f4ec492705ecaf48998a}{time\+Stop} ()
+\begin{DoxyCompactList}\small\item\em time\+Stop Get the intermediate time. Before each display of the game, the current time will be kept in a variable and we\textquotesingle{}ll make a substraction \+: current time -\/ starting time. Once converted in seconds, we will have the number of seconds already spend on the game. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a00c7a1babd45b85f4e828c2e11819110}{is\+Won} ()
+\begin{DoxyCompactList}\small\item\em is\+Won Indicates if the game is won or not. To win, the player must unveil all the cases that are not bombs. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_a9c1972964aca515fabb01f93841d018c}{is\+Over\+And\+Won} ()
+\begin{DoxyCompactList}\small\item\em is\+Over\+And\+Won Indicates if the game is over and won. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_a1e50ebc43155a8ef4f01beb2ad769e0d}{put\+Flag} (int i, int j)
+\begin{DoxyCompactList}\small\item\em put\+Flag If the case already contains a flag, the flag will be removed, else a flag will be put. We will set the attribut flag\+\_\+ of \hyperlink{class_case}{Case} to false or true, accordingly. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_ae2ad6aa30a56758bcd0842438a04b473}{play} (int i, int j)
+\begin{DoxyCompactList}\small\item\em play Unveil the case (i,j). If there is a bomb, the game is over (is\+Over\+\_\+ set to true); If the player can not play on this case, an invalid\+\_\+argument is thrown (e.\+g., a flag is on it or it is already unveiled); Else, we unveil the case. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_ac8d0bdea6e61483d988106dc2dc69e7e}\label{class_game_ac8d0bdea6e61483d988106dc2dc69e7e}} 
+void \hyperlink{class_game_ac8d0bdea6e61483d988106dc2dc69e7e}{activate\+Bonus} ()
+\begin{DoxyCompactList}\small\item\em activate\+Bonus Use the bonus of the user. It plays on a random case. This case is assured not to be a bomb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_game}{Game} class It represents the model of the application, it handles all the functionality of the game Demineur. 
+
+Definition at line 14 of file game.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_a4db83a8aaf9743aa8f15d6e3c03d9e40}\label{class_game_a4db83a8aaf9743aa8f15d6e3c03d9e40}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{const \hyperlink{class_board}{Board} \&}]{board }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_game}{Game} the constructor Instantiates an instance of the class with predefined \hyperlink{class_board}{Board} and Player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & the board on which the game has to be played. \\
+\hline
+{\em player} & the player that plays. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file game.\+cpp.
+
+\mbox{\Hypertarget{class_game_ae130acf9aed6f46c32802fb6da8187b1}\label{class_game_ae130acf9aed6f46c32802fb6da8187b1}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{int}]{length,  }\item[{int}]{width,  }\item[{int}]{nb\+Bombs }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_game}{Game} the constructor Instantiates an instance of the class with predefined lenght and width to set the board\textquotesingle{}s dimension, a number of bombs and the name of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & the length (height, y-\/axis) of the board. \\
+\hline
+{\em width} & the width (x-\/axis) of the board. \\
+\hline
+{\em nb\+Bombs} & the number of bombs that need to be put on the board. \\
+\hline
+{\em name} & the name of the player. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file game.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_abb01bda7e2fecca8571706abec4bc3dd}\label{class_game_abb01bda7e2fecca8571706abec4bc3dd}} 
+\index{Game@{Game}!get\+Board@{get\+Board}}
+\index{get\+Board@{get\+Board}!Game@{Game}}
+\subsubsection{\texorpdfstring{get\+Board()}{getBoard()}}
+{\footnotesize\ttfamily \hyperlink{class_board}{Board} \& Game\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Board Returns the board of the game. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_board}{Board}, the board of the game. 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file game.\+h.
+
+\mbox{\Hypertarget{class_game_a85755ec9e90fdb122c9b93c706668f1a}\label{class_game_a85755ec9e90fdb122c9b93c706668f1a}} 
+\index{Game@{Game}!get\+Start\+Time@{get\+Start\+Time}}
+\index{get\+Start\+Time@{get\+Start\+Time}!Game@{Game}}
+\subsubsection{\texorpdfstring{get\+Start\+Time()}{getStartTime()}}
+{\footnotesize\ttfamily \textbf{ std\+::chrono\+::time\+\_\+point}$<$ \textbf{ chrono\+::system\+\_\+clock} $>$ \& Game\+::get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Start\+Time Returns the starting time of the game. 
+
+\begin{DoxyReturn}{Returns}
+the starting time of the game. 
+\end{DoxyReturn}
+
+
+Definition at line 192 of file game.\+h.
+
+\mbox{\Hypertarget{class_game_a1e71702da13cf28f77ab870b417a6866}\label{class_game_a1e71702da13cf28f77ab870b417a6866}} 
+\index{Game@{Game}!init@{init}}
+\index{init@{init}!Game@{Game}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Game\+::init (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+init Initializes the \hyperlink{class_game}{Game} by 
+
+
+\begin{DoxyItemize}
+\item setting the bool instantiated\+\_\+ to true
+\item put all the bombs on the table by choosing randomly the cases that must contain them.
+\item set the content (nb of bombs around) of each empty case
+\item unveil the case (i,j). This case, by default, never contains a bomb.
+\item start the timer. 
+\begin{DoxyParams}{Parameters}
+{\em i} & the row of the case we have to unveil. \\
+\hline
+{\em j} & the column of the case we have to unveil. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Definition at line 17 of file game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a1cb2f9034bb550c3debfced46b945d11}\label{class_game_a1cb2f9034bb550c3debfced46b945d11}} 
+\index{Game@{Game}!is\+Instantiated@{is\+Instantiated}}
+\index{is\+Instantiated@{is\+Instantiated}!Game@{Game}}
+\subsubsection{\texorpdfstring{is\+Instantiated()}{isInstantiated()}}
+{\footnotesize\ttfamily bool Game\+::is\+Instantiated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Instantiated Indicates if the game has been instantiated or not. 
+
+\begin{DoxyReturn}{Returns}
+true if the game is instantiated, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file game.\+h.
+
+\mbox{\Hypertarget{class_game_ab8536df425c768f3524c87de99aa9cd9}\label{class_game_ab8536df425c768f3524c87de99aa9cd9}} 
+\index{Game@{Game}!is\+Over@{is\+Over}}
+\index{is\+Over@{is\+Over}!Game@{Game}}
+\subsubsection{\texorpdfstring{is\+Over()}{isOver()}}
+{\footnotesize\ttfamily bool Game\+::is\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Over Indicates if the game is over or not. 
+
+\begin{DoxyReturn}{Returns}
+true if it is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 196 of file game.\+h.
+
+\mbox{\Hypertarget{class_game_a9c1972964aca515fabb01f93841d018c}\label{class_game_a9c1972964aca515fabb01f93841d018c}} 
+\index{Game@{Game}!is\+Over\+And\+Won@{is\+Over\+And\+Won}}
+\index{is\+Over\+And\+Won@{is\+Over\+And\+Won}!Game@{Game}}
+\subsubsection{\texorpdfstring{is\+Over\+And\+Won()}{isOverAndWon()}}
+{\footnotesize\ttfamily bool Game\+::is\+Over\+And\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Over\+And\+Won Indicates if the game is over and won. 
+
+\begin{DoxyReturn}{Returns}
+true if it is won and over, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a00c7a1babd45b85f4e828c2e11819110}\label{class_game_a00c7a1babd45b85f4e828c2e11819110}} 
+\index{Game@{Game}!is\+Won@{is\+Won}}
+\index{is\+Won@{is\+Won}!Game@{Game}}
+\subsubsection{\texorpdfstring{is\+Won()}{isWon()}}
+{\footnotesize\ttfamily bool Game\+::is\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Won Indicates if the game is won or not. To win, the player must unveil all the cases that are not bombs. 
+
+\begin{DoxyReturn}{Returns}
+true if it is won, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file game.\+cpp.
+
+\mbox{\Hypertarget{class_game_ae2ad6aa30a56758bcd0842438a04b473}\label{class_game_ae2ad6aa30a56758bcd0842438a04b473}} 
+\index{Game@{Game}!play@{play}}
+\index{play@{play}!Game@{Game}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Game\+::play (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+play Unveil the case (i,j). If there is a bomb, the game is over (is\+Over\+\_\+ set to true); If the player can not play on this case, an invalid\+\_\+argument is thrown (e.\+g., a flag is on it or it is already unveiled); Else, we unveil the case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the row. \\
+\hline
+{\em j} & the col. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a1e50ebc43155a8ef4f01beb2ad769e0d}\label{class_game_a1e50ebc43155a8ef4f01beb2ad769e0d}} 
+\index{Game@{Game}!put\+Flag@{put\+Flag}}
+\index{put\+Flag@{put\+Flag}!Game@{Game}}
+\subsubsection{\texorpdfstring{put\+Flag()}{putFlag()}}
+{\footnotesize\ttfamily void Game\+::put\+Flag (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+put\+Flag If the case already contains a flag, the flag will be removed, else a flag will be put. We will set the attribut flag\+\_\+ of \hyperlink{class_case}{Case} to false or true, accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the row of the case. \\
+\hline
+{\em j} & the column of the case. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file game.\+cpp.
+
+\mbox{\Hypertarget{class_game_aba2ee6adbc00f4ec492705ecaf48998a}\label{class_game_aba2ee6adbc00f4ec492705ecaf48998a}} 
+\index{Game@{Game}!time\+Stop@{time\+Stop}}
+\index{time\+Stop@{time\+Stop}!Game@{Game}}
+\subsubsection{\texorpdfstring{time\+Stop()}{timeStop()}}
+{\footnotesize\ttfamily int Game\+::time\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+time\+Stop Get the intermediate time. Before each display of the game, the current time will be kept in a variable and we\textquotesingle{}ll make a substraction \+: current time -\/ starting time. Once converted in seconds, we will have the number of seconds already spend on the game. 
+
+\begin{DoxyReturn}{Returns}
+the number of seconds the player has played the game so far. 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file game.\+h.
+
+\mbox{\Hypertarget{class_game_a5423ce2b75acf6435cdea79c8c2b2112}\label{class_game_a5423ce2b75acf6435cdea79c8c2b2112}} 
+\index{Game@{Game}!unveil\+All@{unveil\+All}}
+\index{unveil\+All@{unveil\+All}!Game@{Game}}
+\subsubsection{\texorpdfstring{unveil\+All()}{unveilAll()}}
+{\footnotesize\ttfamily void Game\+::unveil\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+operator = Assign the values of a game to the current one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & the game that will give its value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly formed game.
+\end{DoxyReturn}
+unveil\+All Unveills all the case of the board by setting the attribute visible\+\_\+ of \hyperlink{class_case}{Case} to true. 
+
+Definition at line 81 of file game.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/game.\+h\item 
+Application/game.\+cpp\end{DoxyCompactItemize}

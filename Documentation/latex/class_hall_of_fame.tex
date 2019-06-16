@@ -1,0 +1,132 @@
+\hypertarget{class_hall_of_fame}{}\section{Hall\+Of\+Fame Class Reference}
+\label{class_hall_of_fame}\index{Hall\+Of\+Fame@{Hall\+Of\+Fame}}
+
+
+The \hyperlink{class_hall_of_fame}{Hall\+Of\+Fame} class Represents all the top 5 for all the different type of board. For each triplet (height, width, nb\+Bombs), there is a top5.  
+
+
+
+
+{\ttfamily \#include $<$halloffame.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_hall_of_fame_a158b9ebd9094021024497bd5f3e04199}\label{class_hall_of_fame_a158b9ebd9094021024497bd5f3e04199}} 
+\hyperlink{class_hall_of_fame_a158b9ebd9094021024497bd5f3e04199}{Hall\+Of\+Fame} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_hall_of_fame}{Hall\+Of\+Fame} It creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hall_of_fame_a5960b73dc9e85927117541675c855ca7}\label{class_hall_of_fame_a5960b73dc9e85927117541675c855ca7}} 
+\hyperlink{class_hall_of_fame_a5960b73dc9e85927117541675c855ca7}{$\sim$\+Hall\+Of\+Fame} ()
+\begin{DoxyCompactList}\small\item\em The destructor Deletes all the elements from the class that need to be deleted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hall_of_fame_a9ce6a64635d9087f0bce2f6b911918ab}\label{class_hall_of_fame_a9ce6a64635d9087f0bce2f6b911918ab}} 
+void \hyperlink{class_hall_of_fame_a9ce6a64635d9087f0bce2f6b911918ab}{init\+Map\+Score} ()
+\begin{DoxyCompactList}\small\item\em init\+Map\+Score Read all the data (height, width, nb\+Bombs, name of player, time (for 1 game)) in a file (.txt) Copy them all into scores, a map, the attribute of the class. \end{DoxyCompactList}\item 
+void \hyperlink{class_hall_of_fame_af27ed4518905f0a948112a05268ffd73}{add\+Score} (const \hyperlink{struct_board_type}{Board\+Type} \&board\+Type, const \hyperlink{class_score}{Score} \&score)
+\begin{DoxyCompactList}\small\item\em add\+Score Adds a \hyperlink{class_score}{Score} (structure composed of the name of the player and its time) into the map. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ \hyperlink{class_hall_of_fame_aa5df9550ea310ad6d72c55c0656213a0}{get\+Top} (const \hyperlink{struct_board_type}{Board\+Type} \&board\+Type)
+\begin{DoxyCompactList}\small\item\em get\+Top Returns the top (list of 5 bests times) for a given \hyperlink{struct_board_type}{Board\+Type}. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ \hyperlink{class_hall_of_fame_ade9732fe195179e6ff7a7adecf2f4528}{get\+Top} (int index)
+\begin{DoxyCompactList}\small\item\em get\+Top Returns the top (list of 5 bests times) for a given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_hall_of_fame_a84804f031deb3f4ef290bce0c6f84db9}\label{class_hall_of_fame_a84804f031deb3f4ef290bce0c6f84db9}} 
+void \hyperlink{class_hall_of_fame_a84804f031deb3f4ef290bce0c6f84db9}{write\+File} ()
+\begin{DoxyCompactList}\small\item\em write\+File Writes into a file the content of the map. We do that in order to save the scores and then keep an history of the best scores. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \textbf{ std\+::string} $>$ \hyperlink{class_hall_of_fame_aa784fe5d8ace8fb5b2344a06bfb5fb84}{get\+Keys} ()
+\begin{DoxyCompactList}\small\item\em get\+Keys Get all the boardtype on which it exists a top. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_hall_of_fame}{Hall\+Of\+Fame} class Represents all the top 5 for all the different type of board. For each triplet (height, width, nb\+Bombs), there is a top5. 
+
+Definition at line 13 of file halloffame.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hall_of_fame_af27ed4518905f0a948112a05268ffd73}\label{class_hall_of_fame_af27ed4518905f0a948112a05268ffd73}} 
+\index{Hall\+Of\+Fame@{Hall\+Of\+Fame}!add\+Score@{add\+Score}}
+\index{add\+Score@{add\+Score}!Hall\+Of\+Fame@{Hall\+Of\+Fame}}
+\subsubsection{\texorpdfstring{add\+Score()}{addScore()}}
+{\footnotesize\ttfamily void Hall\+Of\+Fame\+::add\+Score (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{board\+Type,  }\item[{const \hyperlink{class_score}{Score} \&}]{score }\end{DoxyParamCaption})}
+
+
+
+add\+Score Adds a \hyperlink{class_score}{Score} (structure composed of the name of the player and its time) into the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Type} & The \hyperlink{struct_board_type}{Board\+Type} (height, width and nb\+Bombs of the board) \\
+\hline
+{\em score} & the \hyperlink{class_score}{Score} (name and time). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file halloffame.\+cpp.
+
+\mbox{\Hypertarget{class_hall_of_fame_aa784fe5d8ace8fb5b2344a06bfb5fb84}\label{class_hall_of_fame_aa784fe5d8ace8fb5b2344a06bfb5fb84}} 
+\index{Hall\+Of\+Fame@{Hall\+Of\+Fame}!get\+Keys@{get\+Keys}}
+\index{get\+Keys@{get\+Keys}!Hall\+Of\+Fame@{Hall\+Of\+Fame}}
+\subsubsection{\texorpdfstring{get\+Keys()}{getKeys()}}
+{\footnotesize\ttfamily \textbf{ vector}$<$ \textbf{ string} $>$ Hall\+Of\+Fame\+::get\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Keys Get all the boardtype on which it exists a top. 
+
+\begin{DoxyReturn}{Returns}
+All the board\+Type on which it exists a top. 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file halloffame.\+cpp.
+
+\mbox{\Hypertarget{class_hall_of_fame_aa5df9550ea310ad6d72c55c0656213a0}\label{class_hall_of_fame_aa5df9550ea310ad6d72c55c0656213a0}} 
+\index{Hall\+Of\+Fame@{Hall\+Of\+Fame}!get\+Top@{get\+Top}}
+\index{get\+Top@{get\+Top}!Hall\+Of\+Fame@{Hall\+Of\+Fame}}
+\subsubsection{\texorpdfstring{get\+Top()}{getTop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ Hall\+Of\+Fame\+::get\+Top (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{board\+Type }\end{DoxyParamCaption})}
+
+
+
+get\+Top Returns the top (list of 5 bests times) for a given \hyperlink{struct_board_type}{Board\+Type}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Type} & the \hyperlink{struct_board_type}{Board\+Type}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of \hyperlink{class_score}{Score}, the top 5 linked to the given \hyperlink{struct_board_type}{Board\+Type}. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file halloffame.\+cpp.
+
+\mbox{\Hypertarget{class_hall_of_fame_ade9732fe195179e6ff7a7adecf2f4528}\label{class_hall_of_fame_ade9732fe195179e6ff7a7adecf2f4528}} 
+\index{Hall\+Of\+Fame@{Hall\+Of\+Fame}!get\+Top@{get\+Top}}
+\index{get\+Top@{get\+Top}!Hall\+Of\+Fame@{Hall\+Of\+Fame}}
+\subsubsection{\texorpdfstring{get\+Top()}{getTop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ Hall\+Of\+Fame\+::get\+Top (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+get\+Top Returns the top (list of 5 bests times) for a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the top in the map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of \hyperlink{class_score}{Score}, the top 5 linked to the given index. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file halloffame.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/halloffame.\+h\item 
+Application/halloffame.\+cpp\end{DoxyCompactItemize}

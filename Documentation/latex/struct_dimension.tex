@@ -1,0 +1,134 @@
+\hypertarget{struct_dimension}{}\section{Dimension Struct Reference}
+\label{struct_dimension}\index{Dimension@{Dimension}}
+
+
+\hyperlink{struct_dimension}{Dimension}, the dimension of the board. A dimension is composed of an height and a width.  
+
+
+
+
+{\ttfamily \#include $<$structure.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_dimension}{Dimension} \& \hyperlink{struct_dimension_acbce569721e053b72d6ed134ed649fe4}{operator=} (const \hyperlink{struct_dimension}{Dimension} \&a)
+\begin{DoxyCompactList}\small\item\em operator = Assigns the value of a \hyperlink{struct_dimension}{Dimension} to a new one. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_dimension_a193e00a30205877faa6eb2978e11894f}{operator$<$} (const \hyperlink{struct_dimension}{Dimension} \&r) const
+\begin{DoxyCompactList}\small\item\em operator $<$ Verifies if a \hyperlink{struct_dimension}{Dimension} is smaller than another. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_dimension_a31342c295eeff5e9fc89e47656192c5d}{operator$>$} (const \hyperlink{struct_dimension}{Dimension} \&r) const
+\begin{DoxyCompactList}\small\item\em operator $>$ Verifies if a \hyperlink{struct_dimension}{Dimension} is greater than another. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_dimension_aa50ef143b3130d4810950788a580b342}{operator==} (const \hyperlink{struct_dimension}{Dimension} \&dim)
+\begin{DoxyCompactList}\small\item\em operator == Verifies if two Dimensions have the same values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_dimension_ae6458fe2808cda65f04a61d532bd45df}\label{struct_dimension_ae6458fe2808cda65f04a61d532bd45df}} 
+int \hyperlink{struct_dimension_ae6458fe2808cda65f04a61d532bd45df}{height}
+\begin{DoxyCompactList}\small\item\em height the height of the board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_dimension_a9ccec48bbada6d1b8aaa9a1e5fc60fcd}\label{struct_dimension_a9ccec48bbada6d1b8aaa9a1e5fc60fcd}} 
+int \hyperlink{struct_dimension_a9ccec48bbada6d1b8aaa9a1e5fc60fcd}{width}
+\begin{DoxyCompactList}\small\item\em width the width of the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_dimension}{Dimension}, the dimension of the board. A dimension is composed of an height and a width. 
+
+Definition at line 8 of file structure.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_dimension_a193e00a30205877faa6eb2978e11894f}\label{struct_dimension_a193e00a30205877faa6eb2978e11894f}} 
+\index{Dimension@{Dimension}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Dimension@{Dimension}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Dimension\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_dimension}{Dimension} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $<$ Verifies if a \hyperlink{struct_dimension}{Dimension} is smaller than another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_dimension}{Dimension} the current \hyperlink{struct_dimension}{Dimension} is compared to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{struct_dimension}{Dimension} is smaller, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file structure.\+h.
+
+\mbox{\Hypertarget{struct_dimension_acbce569721e053b72d6ed134ed649fe4}\label{struct_dimension_acbce569721e053b72d6ed134ed649fe4}} 
+\index{Dimension@{Dimension}!operator=@{operator=}}
+\index{operator=@{operator=}!Dimension@{Dimension}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{struct_dimension}{Dimension}\& Dimension\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_dimension}{Dimension} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator = Assigns the value of a \hyperlink{struct_dimension}{Dimension} to a new one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_dimension}{Dimension} we take the value from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{struct_dimension}{Dimension}, that has the same value as the other one. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file structure.\+h.
+
+\mbox{\Hypertarget{struct_dimension_aa50ef143b3130d4810950788a580b342}\label{struct_dimension_aa50ef143b3130d4810950788a580b342}} 
+\index{Dimension@{Dimension}!operator==@{operator==}}
+\index{operator==@{operator==}!Dimension@{Dimension}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Dimension\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_dimension}{Dimension} \&}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator == Verifies if two Dimensions have the same values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_dimension}{Dimension} the current \hyperlink{struct_dimension}{Dimension} is compared to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{struct_dimension}{Dimension} are equals, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file structure.\+h.
+
+\mbox{\Hypertarget{struct_dimension_a31342c295eeff5e9fc89e47656192c5d}\label{struct_dimension_a31342c295eeff5e9fc89e47656192c5d}} 
+\index{Dimension@{Dimension}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Dimension@{Dimension}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Dimension\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_dimension}{Dimension} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $>$ Verifies if a \hyperlink{struct_dimension}{Dimension} is greater than another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_dimension}{Dimension} the current \hyperlink{struct_dimension}{Dimension} is compared to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{struct_dimension}{Dimension} is greater, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file structure.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Application/structure.\+h\end{DoxyCompactItemize}

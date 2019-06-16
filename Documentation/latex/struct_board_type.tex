@@ -1,0 +1,134 @@
+\hypertarget{struct_board_type}{}\section{Board\+Type Struct Reference}
+\label{struct_board_type}\index{Board\+Type@{Board\+Type}}
+
+
+\hyperlink{struct_board_type}{Board\+Type} A \hyperlink{struct_board_type}{Board\+Type} is composed of a \hyperlink{struct_dimension}{Dimension} and a number of bombs.  
+
+
+
+
+{\ttfamily \#include $<$structure.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_board_type}{Board\+Type} \& \hyperlink{struct_board_type_a9747ba7e3183a87070bf6458d3a9c976}{operator=} (const \hyperlink{struct_board_type}{Board\+Type} \&a)
+\begin{DoxyCompactList}\small\item\em operator = Assigns the value of a \hyperlink{struct_board_type}{Board\+Type} to a new one. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_board_type_a28a88d9da8a9fdd94738d12c7192b005}{operator$<$} (const \hyperlink{struct_board_type}{Board\+Type} \&r) const
+\begin{DoxyCompactList}\small\item\em operator $<$ Verifies if a \hyperlink{struct_board_type}{Board\+Type} is smaller than another. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_board_type_a7e193ddf65e7ce01610ecb2e88eca0d7}{operator$>$} (const \hyperlink{struct_board_type}{Board\+Type} \&r)
+\begin{DoxyCompactList}\small\item\em operator $>$ Verifies if a \hyperlink{struct_board_type}{Board\+Type} is greater than another. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_board_type_a4a983738b8a82c018896deae60ff66dd}{operator==} (const \hyperlink{struct_board_type}{Board\+Type} \&board)
+\begin{DoxyCompactList}\small\item\em operator == Verifies if two \hyperlink{struct_board_type}{Board\+Type} have the same values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_board_type_a4104dbd7195c84299197a06ae87ff4bf}\label{struct_board_type_a4104dbd7195c84299197a06ae87ff4bf}} 
+\hyperlink{struct_dimension}{Dimension} \hyperlink{struct_board_type_a4104dbd7195c84299197a06ae87ff4bf}{dimension}
+\begin{DoxyCompactList}\small\item\em dimension The dimension of the board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_board_type_adaaa6a2f0c9049b41a53544120775286}\label{struct_board_type_adaaa6a2f0c9049b41a53544120775286}} 
+int \hyperlink{struct_board_type_adaaa6a2f0c9049b41a53544120775286}{nb\+Bomb}
+\begin{DoxyCompactList}\small\item\em nb\+Bomb The number of bombs that are in the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_board_type}{Board\+Type} A \hyperlink{struct_board_type}{Board\+Type} is composed of a \hyperlink{struct_dimension}{Dimension} and a number of bombs. 
+
+Definition at line 123 of file structure.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_board_type_a28a88d9da8a9fdd94738d12c7192b005}\label{struct_board_type_a28a88d9da8a9fdd94738d12c7192b005}} 
+\index{Board\+Type@{Board\+Type}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Board\+Type@{Board\+Type}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Board\+Type\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $<$ Verifies if a \hyperlink{struct_board_type}{Board\+Type} is smaller than another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_board_type}{Board\+Type} the current \hyperlink{struct_dimension}{Dimension} is compared to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{struct_board_type}{Board\+Type} is smaller, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 155 of file structure.\+h.
+
+\mbox{\Hypertarget{struct_board_type_a9747ba7e3183a87070bf6458d3a9c976}\label{struct_board_type_a9747ba7e3183a87070bf6458d3a9c976}} 
+\index{Board\+Type@{Board\+Type}!operator=@{operator=}}
+\index{operator=@{operator=}!Board\+Type@{Board\+Type}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{struct_board_type}{Board\+Type}\& Board\+Type\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator = Assigns the value of a \hyperlink{struct_board_type}{Board\+Type} to a new one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_board_type}{Board\+Type} we take the value from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{struct_board_type}{Board\+Type}, that has the same value as the other one. 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file structure.\+h.
+
+\mbox{\Hypertarget{struct_board_type_a4a983738b8a82c018896deae60ff66dd}\label{struct_board_type_a4a983738b8a82c018896deae60ff66dd}} 
+\index{Board\+Type@{Board\+Type}!operator==@{operator==}}
+\index{operator==@{operator==}!Board\+Type@{Board\+Type}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Board\+Type\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator == Verifies if two \hyperlink{struct_board_type}{Board\+Type} have the same values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_board_type}{Board\+Type} the current \hyperlink{struct_dimension}{Dimension} is compared to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{struct_board_type}{Board\+Type} are equals, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file structure.\+h.
+
+\mbox{\Hypertarget{struct_board_type_a7e193ddf65e7ce01610ecb2e88eca0d7}\label{struct_board_type_a7e193ddf65e7ce01610ecb2e88eca0d7}} 
+\index{Board\+Type@{Board\+Type}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Board\+Type@{Board\+Type}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Board\+Type\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $>$ Verifies if a \hyperlink{struct_board_type}{Board\+Type} is greater than another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the \hyperlink{struct_board_type}{Board\+Type} the current \hyperlink{struct_dimension}{Dimension} is compared to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{struct_board_type}{Board\+Type} is greater, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file structure.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Application/structure.\+h\end{DoxyCompactItemize}

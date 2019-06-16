@@ -1,0 +1,100 @@
+\hypertarget{class_top}{}\section{Top Class Reference}
+\label{class_top}\index{Top@{Top}}
+
+
+The \hyperlink{class_top}{Top} class This class represents a top. It is basically a list of the x Scores, x being a int.  
+
+
+
+
+{\ttfamily \#include $<$top.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_top_a34354b5614915b4001460886cb0f9350}{Top} (\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ top)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_top}{Top}, the constructor It creates an instance of the class with a predefined vector of Scores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_top_a1f4fdbd54e6af309245c4a2126ec7775}\label{class_top_a1f4fdbd54e6af309245c4a2126ec7775}} 
+\hyperlink{class_top_a1f4fdbd54e6af309245c4a2126ec7775}{Top} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_top}{Top}, the constructor It creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_top_af6ef9a3be4a4dece0bd073676c7357d6}\label{class_top_af6ef9a3be4a4dece0bd073676c7357d6}} 
+\hyperlink{class_top_af6ef9a3be4a4dece0bd073676c7357d6}{$\sim$\+Top} ()
+\begin{DoxyCompactList}\small\item\em the destructor It deletes all the elements from the class that need to be deleted. \end{DoxyCompactList}\item 
+void \hyperlink{class_top_a66039146b2d0a09171048facdb9a32d0}{add\+Score} (\hyperlink{class_score}{Score} score)
+\begin{DoxyCompactList}\small\item\em add\+Score Adds a \hyperlink{class_score}{Score} into the vector. Before doing this, the methods verify if the \hyperlink{class_score}{Score} to be added can fit in the vector. If the time of the new \hyperlink{class_score}{Score} is faster (smaller) than the fifth time, the \hyperlink{class_score}{Score} is added; else, nothing is done. \end{DoxyCompactList}\item 
+\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$ \hyperlink{class_top_aef6a8f55e1db5c9c39e0978627af63d1}{get\+List\+Score} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Score Returns a copy of the vector top\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_top}{Top} class This class represents a top. It is basically a list of the x Scores, x being a int. 
+
+Definition at line 11 of file top.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_top_a34354b5614915b4001460886cb0f9350}\label{class_top_a34354b5614915b4001460886cb0f9350}} 
+\index{Top@{Top}!Top@{Top}}
+\index{Top@{Top}!Top@{Top}}
+\subsubsection{\texorpdfstring{Top()}{Top()}}
+{\footnotesize\ttfamily Top\+::\+Top (\begin{DoxyParamCaption}\item[{\textbf{ std\+::vector}$<$ \hyperlink{class_score}{Score} $>$}]{top }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_top}{Top}, the constructor It creates an instance of the class with a predefined vector of Scores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & a vector of Scores. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file top.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_top_a66039146b2d0a09171048facdb9a32d0}\label{class_top_a66039146b2d0a09171048facdb9a32d0}} 
+\index{Top@{Top}!add\+Score@{add\+Score}}
+\index{add\+Score@{add\+Score}!Top@{Top}}
+\subsubsection{\texorpdfstring{add\+Score()}{addScore()}}
+{\footnotesize\ttfamily void Top\+::add\+Score (\begin{DoxyParamCaption}\item[{\hyperlink{class_score}{Score}}]{score }\end{DoxyParamCaption})}
+
+
+
+add\+Score Adds a \hyperlink{class_score}{Score} into the vector. Before doing this, the methods verify if the \hyperlink{class_score}{Score} to be added can fit in the vector. If the time of the new \hyperlink{class_score}{Score} is faster (smaller) than the fifth time, the \hyperlink{class_score}{Score} is added; else, nothing is done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & the new \hyperlink{class_score}{Score} that has to be verified and then added, accordingly. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file top.\+cpp.
+
+\mbox{\Hypertarget{class_top_aef6a8f55e1db5c9c39e0978627af63d1}\label{class_top_aef6a8f55e1db5c9c39e0978627af63d1}} 
+\index{Top@{Top}!get\+List\+Score@{get\+List\+Score}}
+\index{get\+List\+Score@{get\+List\+Score}!Top@{Top}}
+\subsubsection{\texorpdfstring{get\+List\+Score()}{getListScore()}}
+{\footnotesize\ttfamily \textbf{ vector}$<$ \hyperlink{class_score}{Score} $>$ Top\+::get\+List\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+List\+Score Returns a copy of the vector top\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+a copy of the vector top\+\_\+. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file top.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/top.\+h\item 
+Application/top.\+cpp\end{DoxyCompactItemize}

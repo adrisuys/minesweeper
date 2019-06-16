@@ -1,0 +1,403 @@
+\hypertarget{class_controller}{}\section{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+
+
+The \hyperlink{class_controller}{Controller} class It controls all the game and is the link between the view and the model.  
+
+
+
+
+{\ttfamily \#include $<$controller.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_controller_a95c56822d667e94b031451729ce069a9}\label{class_controller_a95c56822d667e94b031451729ce069a9}} 
+\hyperlink{class_controller_a95c56822d667e94b031451729ce069a9}{Controller} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_controller}{Controller}, the constructor It creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}\label{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}} 
+\hyperlink{class_controller_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller} ()
+\begin{DoxyCompactList}\small\item\em The destructor It deletes all the element from the class that need to be deleted. \end{DoxyCompactList}\item 
+\hyperlink{class_controller}{Controller} \& \hyperlink{class_controller_ab237d20daccadca0d4bad9194d17c306}{operator=} (\hyperlink{class_controller}{Controller} \&o)
+\begin{DoxyCompactList}\small\item\em operator = Assign the values of a controller to the current one. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_a177d0d6cd7cdb7784ae9c506debfa2c6}{set\+Name} (\textbf{ std\+::string} name)
+\begin{DoxyCompactList}\small\item\em set\+Name Sets the name of the player. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_a7c1d65311fed834ed285040cd24cb320}{set\+Game} (\hyperlink{class_game}{Game} $\ast$g)
+\begin{DoxyCompactList}\small\item\em set\+Game Sets the game in the controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_ae83a66c83bfa72f2995aaa8ae1f23cfa}{first\+Play} (int i, int j)
+\begin{DoxyCompactList}\small\item\em first\+Play Play for the first time. \end{DoxyCompactList}\item 
+\textbf{ std\+::string} \hyperlink{class_controller_ac60aa220e5bf8cd0329b585c817bb5c4}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em get\+Name Get the name of the user. \end{DoxyCompactList}\item 
+int \hyperlink{class_controller_a108724342a6e4b06b0574c3a7d615bb2}{get\+Score} ()
+\begin{DoxyCompactList}\small\item\em get\+Score Get the score of the user. \end{DoxyCompactList}\item 
+bool \hyperlink{class_controller_a913c8ab636b486a26a4dd533d84e15b6}{add\+Score} (const \hyperlink{struct_board_type}{Board\+Type} \&board\+Type)
+\begin{DoxyCompactList}\small\item\em add\+Score Add a score to the HoF. \end{DoxyCompactList}\item 
+\hyperlink{class_game}{Game} $\ast$ \hyperlink{class_controller_aa6f9cab2dd64ec7f93e4834bf44ca4a7}{get\+Game} ()
+\begin{DoxyCompactList}\small\item\em get\+Game Get the game. \end{DoxyCompactList}\item 
+\hyperlink{class_hall_of_fame}{Hall\+Of\+Fame} \hyperlink{class_controller_abdad52832c8cd32d0f1e0c51442bda4c}{get\+H\+OF} ()
+\begin{DoxyCompactList}\small\item\em get\+H\+OF Get the hall of fame. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_a0f3954f7d90dba352953ce56491c5571}{play\+Once} (int i, int j, bool play)
+\begin{DoxyCompactList}\small\item\em play\+Once Play a turn. \end{DoxyCompactList}\item 
+int \hyperlink{class_controller_abaf42e3aabfc99cd4bc9c3395601e87f}{nb\+Bombs\+Default} (int i, int j)
+\begin{DoxyCompactList}\small\item\em nb\+Bombs\+Default Calculte the number of bombs by default. \end{DoxyCompactList}\item 
+bool \hyperlink{class_controller_a970af2439cfa0d315d769a4d92122928}{is\+Won} ()
+\begin{DoxyCompactList}\small\item\em is\+Won Check if the player has won. \end{DoxyCompactList}\item 
+bool \hyperlink{class_controller_a94cd37594f77fa357c9c6842884788d3}{is\+Over} ()
+\begin{DoxyCompactList}\small\item\em is\+Over Check if the game of the user is over. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_aec60259dfc79f3100681447c9a0c3117}\label{class_controller_aec60259dfc79f3100681447c9a0c3117}} 
+void \hyperlink{class_controller_aec60259dfc79f3100681447c9a0c3117}{activate\+Bonus} ()
+\begin{DoxyCompactList}\small\item\em activate\+Bonus Use the bonus of the user. \end{DoxyCompactList}\item 
+bool \hyperlink{class_controller_a6968f47298e55d9957bb330cf9cf957f}{is\+Bonus\+Used} ()
+\begin{DoxyCompactList}\small\item\em is\+Bonus\+Used Check if the bonus is already used. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_a6a06f685c0fdb19ceac20199db9916cd}{set\+Bonus\+Used} (bool used)
+\begin{DoxyCompactList}\small\item\em set\+Bonus\+Used Set the bonus\+Used. \end{DoxyCompactList}\item 
+void \hyperlink{class_controller_af9823d858e9ed334c8d20601f1e1fb02}{set\+Score} (int new\+Score)
+\begin{DoxyCompactList}\small\item\em set\+Score Set the score of the user. \end{DoxyCompactList}\item 
+int \hyperlink{class_controller_a1f5e158318b26e15a023391827617c04}{get\+Nb\+Click} ()
+\begin{DoxyCompactList}\small\item\em get\+Nb\+Click Get the number of click of the user when he\textquotesingle{}s playing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_a06c2739a07f098cfb843b0b4f6a3826f}\label{class_controller_a06c2739a07f098cfb843b0b4f6a3826f}} 
+void \hyperlink{class_controller_a06c2739a07f098cfb843b0b4f6a3826f}{add\+Click} ()
+\begin{DoxyCompactList}\small\item\em add\+Click Add a click on click count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_a7b328695be686af4a9f7fe290781fbb0}\label{class_controller_a7b328695be686af4a9f7fe290781fbb0}} 
+void \hyperlink{class_controller_a7b328695be686af4a9f7fe290781fbb0}{re\+Init} ()
+\begin{DoxyCompactList}\small\item\em re\+Init Init the controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_controller}{Controller} class It controls all the game and is the link between the view and the model. 
+
+Definition at line 12 of file controller.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_a913c8ab636b486a26a4dd533d84e15b6}\label{class_controller_a913c8ab636b486a26a4dd533d84e15b6}} 
+\index{Controller@{Controller}!add\+Score@{add\+Score}}
+\index{add\+Score@{add\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{add\+Score()}{addScore()}}
+{\footnotesize\ttfamily bool Controller\+::add\+Score (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_board_type}{Board\+Type} \&}]{board\+Type }\end{DoxyParamCaption})}
+
+
+
+add\+Score Add a score to the HoF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Type} & The board\+Type of the last\+Game of the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the user has a score that can be added and false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file controller.\+cpp.
+
+\mbox{\Hypertarget{class_controller_ae83a66c83bfa72f2995aaa8ae1f23cfa}\label{class_controller_ae83a66c83bfa72f2995aaa8ae1f23cfa}} 
+\index{Controller@{Controller}!first\+Play@{first\+Play}}
+\index{first\+Play@{first\+Play}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{first\+Play()}{firstPlay()}}
+{\footnotesize\ttfamily void Controller\+::first\+Play (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+first\+Play Play for the first time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The row of the board. \\
+\hline
+{\em j} & The column of the board. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file controller.\+cpp.
+
+\mbox{\Hypertarget{class_controller_aa6f9cab2dd64ec7f93e4834bf44ca4a7}\label{class_controller_aa6f9cab2dd64ec7f93e4834bf44ca4a7}} 
+\index{Controller@{Controller}!get\+Game@{get\+Game}}
+\index{get\+Game@{get\+Game}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Game()}{getGame()}}
+{\footnotesize\ttfamily \hyperlink{class_game}{Game} $\ast$ Controller\+::get\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Game Get the game. 
+
+\begin{DoxyReturn}{Returns}
+The game of the controller. 
+\end{DoxyReturn}
+
+
+Definition at line 222 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_abdad52832c8cd32d0f1e0c51442bda4c}\label{class_controller_abdad52832c8cd32d0f1e0c51442bda4c}} 
+\index{Controller@{Controller}!get\+H\+OF@{get\+H\+OF}}
+\index{get\+H\+OF@{get\+H\+OF}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+H\+O\+F()}{getHOF()}}
+{\footnotesize\ttfamily \hyperlink{class_hall_of_fame}{Hall\+Of\+Fame} Controller\+::get\+H\+OF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+H\+OF Get the hall of fame. 
+
+\begin{DoxyReturn}{Returns}
+The hall of fame of the game. 
+\end{DoxyReturn}
+
+
+Definition at line 226 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_ac60aa220e5bf8cd0329b585c817bb5c4}\label{class_controller_ac60aa220e5bf8cd0329b585c817bb5c4}} 
+\index{Controller@{Controller}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily \textbf{ std\+::string} Controller\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Name Get the name of the user. 
+
+\begin{DoxyReturn}{Returns}
+The name of the user. 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a1f5e158318b26e15a023391827617c04}\label{class_controller_a1f5e158318b26e15a023391827617c04}} 
+\index{Controller@{Controller}!get\+Nb\+Click@{get\+Nb\+Click}}
+\index{get\+Nb\+Click@{get\+Nb\+Click}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Nb\+Click()}{getNbClick()}}
+{\footnotesize\ttfamily int Controller\+::get\+Nb\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Nb\+Click Get the number of click of the user when he\textquotesingle{}s playing. 
+
+\begin{DoxyReturn}{Returns}
+The number of click of the user when he\textquotesingle{}s playing. 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a108724342a6e4b06b0574c3a7d615bb2}\label{class_controller_a108724342a6e4b06b0574c3a7d615bb2}} 
+\index{Controller@{Controller}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily int Controller\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Score Get the score of the user. 
+
+\begin{DoxyReturn}{Returns}
+The score of the user. 
+\end{DoxyReturn}
+
+
+Definition at line 210 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a6968f47298e55d9957bb330cf9cf957f}\label{class_controller_a6968f47298e55d9957bb330cf9cf957f}} 
+\index{Controller@{Controller}!is\+Bonus\+Used@{is\+Bonus\+Used}}
+\index{is\+Bonus\+Used@{is\+Bonus\+Used}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{is\+Bonus\+Used()}{isBonusUsed()}}
+{\footnotesize\ttfamily bool Controller\+::is\+Bonus\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Bonus\+Used Check if the bonus is already used. 
+
+\begin{DoxyReturn}{Returns}
+True if the user has already used his bonus and false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a94cd37594f77fa357c9c6842884788d3}\label{class_controller_a94cd37594f77fa357c9c6842884788d3}} 
+\index{Controller@{Controller}!is\+Over@{is\+Over}}
+\index{is\+Over@{is\+Over}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{is\+Over()}{isOver()}}
+{\footnotesize\ttfamily bool Controller\+::is\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Over Check if the game of the user is over. 
+
+\begin{DoxyReturn}{Returns}
+True if the game is over and false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a970af2439cfa0d315d769a4d92122928}\label{class_controller_a970af2439cfa0d315d769a4d92122928}} 
+\index{Controller@{Controller}!is\+Won@{is\+Won}}
+\index{is\+Won@{is\+Won}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{is\+Won()}{isWon()}}
+{\footnotesize\ttfamily bool Controller\+::is\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Won Check if the player has won. 
+
+\begin{DoxyReturn}{Returns}
+True if he won and false if not. 
+\end{DoxyReturn}
+
+
+Definition at line 251 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_abaf42e3aabfc99cd4bc9c3395601e87f}\label{class_controller_abaf42e3aabfc99cd4bc9c3395601e87f}} 
+\index{Controller@{Controller}!nb\+Bombs\+Default@{nb\+Bombs\+Default}}
+\index{nb\+Bombs\+Default@{nb\+Bombs\+Default}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{nb\+Bombs\+Default()}{nbBombsDefault()}}
+{\footnotesize\ttfamily int Controller\+::nb\+Bombs\+Default (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+nb\+Bombs\+Default Calculte the number of bombs by default. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The number of row. \\
+\hline
+{\em j} & The number of column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bombs for this format. 
+\end{DoxyReturn}
+
+
+Definition at line 244 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_ab237d20daccadca0d4bad9194d17c306}\label{class_controller_ab237d20daccadca0d4bad9194d17c306}} 
+\index{Controller@{Controller}!operator=@{operator=}}
+\index{operator=@{operator=}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_controller}{Controller} \& Controller\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_controller}{Controller} \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator = Assign the values of a controller to the current one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & the controller that will give its value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly formed controller. 
+\end{DoxyReturn}
+
+
+Definition at line 230 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a0f3954f7d90dba352953ce56491c5571}\label{class_controller_a0f3954f7d90dba352953ce56491c5571}} 
+\index{Controller@{Controller}!play\+Once@{play\+Once}}
+\index{play\+Once@{play\+Once}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{play\+Once()}{playOnce()}}
+{\footnotesize\ttfamily void Controller\+::play\+Once (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{bool}]{play }\end{DoxyParamCaption})}
+
+
+
+play\+Once Play a turn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The row of board. \\
+\hline
+{\em j} & The column of the board. \\
+\hline
+{\em play} & True if the user wants to unveil a case and false if he just wants to flag a case. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file controller.\+cpp.
+
+\mbox{\Hypertarget{class_controller_a6a06f685c0fdb19ceac20199db9916cd}\label{class_controller_a6a06f685c0fdb19ceac20199db9916cd}} 
+\index{Controller@{Controller}!set\+Bonus\+Used@{set\+Bonus\+Used}}
+\index{set\+Bonus\+Used@{set\+Bonus\+Used}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Bonus\+Used()}{setBonusUsed()}}
+{\footnotesize\ttfamily void Controller\+::set\+Bonus\+Used (\begin{DoxyParamCaption}\item[{bool}]{used }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Bonus\+Used Set the bonus\+Used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em used} & The new value of bonus\+Used. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 270 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a7c1d65311fed834ed285040cd24cb320}\label{class_controller_a7c1d65311fed834ed285040cd24cb320}} 
+\index{Controller@{Controller}!set\+Game@{set\+Game}}
+\index{set\+Game@{set\+Game}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Game()}{setGame()}}
+{\footnotesize\ttfamily void Controller\+::set\+Game (\begin{DoxyParamCaption}\item[{\hyperlink{class_game}{Game} $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Game Sets the game in the controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The game to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 240 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_a177d0d6cd7cdb7784ae9c506debfa2c6}\label{class_controller_a177d0d6cd7cdb7784ae9c506debfa2c6}} 
+\index{Controller@{Controller}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Controller\+::set\+Name (\begin{DoxyParamCaption}\item[{\textbf{ std\+::string}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Name Sets the name of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the player. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 218 of file controller.\+h.
+
+\mbox{\Hypertarget{class_controller_af9823d858e9ed334c8d20601f1e1fb02}\label{class_controller_af9823d858e9ed334c8d20601f1e1fb02}} 
+\index{Controller@{Controller}!set\+Score@{set\+Score}}
+\index{set\+Score@{set\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Score()}{setScore()}}
+{\footnotesize\ttfamily void Controller\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{new\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Score Set the score of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Score} & The new score of the user. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 214 of file controller.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/controller.\+h\item 
+Application/controller.\+cpp\end{DoxyCompactItemize}

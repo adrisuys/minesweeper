@@ -1,0 +1,104 @@
+\hypertarget{class_g_u_i_board}{}\section{G\+U\+I\+Board Class Reference}
+\label{class_g_u_i_board}\index{G\+U\+I\+Board@{G\+U\+I\+Board}}
+
+
+The \hyperlink{class_g_u_i_board}{G\+U\+I\+Board} class Represents a board graphically.  
+
+
+
+
+{\ttfamily \#include $<$guiboard.\+h$>$}
+
+Inheritance diagram for G\+U\+I\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_u_i_board}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_u_i_board_a55050277239ca0bd7bfedf36439701ee}{G\+U\+I\+Board} (int row, int col)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_g_u_i_board}{G\+U\+I\+Board} Build a new G\+UI \hyperlink{class_board}{Board}. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_u_i_board_a3e2ddf4a20541fed420ad1527e33c68a}{refresh\+Board} (\hyperlink{class_game}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em refresh\+Board Update the board with a given game. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_u_i_board_aa6fd17a421d1b896a357e30c0cfe349d}{refresh\+Board\+End\+Game} (\hyperlink{class_game}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em refresh\+Board\+End\+Game Updates the board by checking if the player had put a flag on a bomb. If so, a special image of a crossed bomb is put in the case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_g_u_i_board}{G\+U\+I\+Board} class Represents a board graphically. 
+
+Definition at line 12 of file guiboard.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_u_i_board_a55050277239ca0bd7bfedf36439701ee}\label{class_g_u_i_board_a55050277239ca0bd7bfedf36439701ee}} 
+\index{G\+U\+I\+Board@{G\+U\+I\+Board}!G\+U\+I\+Board@{G\+U\+I\+Board}}
+\index{G\+U\+I\+Board@{G\+U\+I\+Board}!G\+U\+I\+Board@{G\+U\+I\+Board}}
+\subsubsection{\texorpdfstring{G\+U\+I\+Board()}{GUIBoard()}}
+{\footnotesize\ttfamily G\+U\+I\+Board\+::\+G\+U\+I\+Board (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_g_u_i_board}{G\+U\+I\+Board} Build a new G\+UI \hyperlink{class_board}{Board}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The number of row. \\
+\hline
+{\em col} & The number of column. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file guiboard.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_u_i_board_a3e2ddf4a20541fed420ad1527e33c68a}\label{class_g_u_i_board_a3e2ddf4a20541fed420ad1527e33c68a}} 
+\index{G\+U\+I\+Board@{G\+U\+I\+Board}!refresh\+Board@{refresh\+Board}}
+\index{refresh\+Board@{refresh\+Board}!G\+U\+I\+Board@{G\+U\+I\+Board}}
+\subsubsection{\texorpdfstring{refresh\+Board()}{refreshBoard()}}
+{\footnotesize\ttfamily void G\+U\+I\+Board\+::refresh\+Board (\begin{DoxyParamCaption}\item[{\hyperlink{class_game}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+refresh\+Board Update the board with a given game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & The game the board has to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file guiboard.\+cpp.
+
+\mbox{\Hypertarget{class_g_u_i_board_aa6fd17a421d1b896a357e30c0cfe349d}\label{class_g_u_i_board_aa6fd17a421d1b896a357e30c0cfe349d}} 
+\index{G\+U\+I\+Board@{G\+U\+I\+Board}!refresh\+Board\+End\+Game@{refresh\+Board\+End\+Game}}
+\index{refresh\+Board\+End\+Game@{refresh\+Board\+End\+Game}!G\+U\+I\+Board@{G\+U\+I\+Board}}
+\subsubsection{\texorpdfstring{refresh\+Board\+End\+Game()}{refreshBoardEndGame()}}
+{\footnotesize\ttfamily void G\+U\+I\+Board\+::refresh\+Board\+End\+Game (\begin{DoxyParamCaption}\item[{\hyperlink{class_game}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+refresh\+Board\+End\+Game Updates the board by checking if the player had put a flag on a bomb. If so, a special image of a crossed bomb is put in the case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & The game the board has to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file guiboard.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/guiboard.\+h\item 
+Application/guiboard.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,188 @@
+\hypertarget{class_case}{}\section{Case Class Reference}
+\label{class_case}\index{Case@{Case}}
+
+
+The \hyperlink{class_case}{Case} class It represents a case of the board.  
+
+
+
+
+{\ttfamily \#include $<$case.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_case_aa159b3687a5f33ef6ac7d461fa8bf948}{Case} (\hyperlink{struct_coordinates}{Coordinates} coordinates)
+\begin{DoxyCompactList}\small\item\em The constructor It creates an instance of the class with predefined coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_case_a32e1ca352eb4c7451897107758779c5d}\label{class_case_a32e1ca352eb4c7451897107758779c5d}} 
+\hyperlink{class_case_a32e1ca352eb4c7451897107758779c5d}{Case} ()=default
+\begin{DoxyCompactList}\small\item\em The constructor It creates an instance of the class from nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_case_ab004564aae3e15db0c7fd5dde0b4c379}\label{class_case_ab004564aae3e15db0c7fd5dde0b4c379}} 
+\hyperlink{class_case_ab004564aae3e15db0c7fd5dde0b4c379}{$\sim$\+Case} ()
+\begin{DoxyCompactList}\small\item\em The destructor It deletes all the element from the class that need to be deleted. \end{DoxyCompactList}\item 
+\hyperlink{struct_coordinates}{Coordinates} \& \hyperlink{class_case_a6a95d5189d914c65d7a4db0f007ff533}{get\+Coordinates} ()
+\begin{DoxyCompactList}\small\item\em returns the coordinates from the case \end{DoxyCompactList}\item 
+bool \hyperlink{class_case_a6bf64c2cc2b5ab1ee9f340dde607eda2}{is\+Visible} ()
+\begin{DoxyCompactList}\small\item\em is\+Visible indicating if a case is unveiled or not. \end{DoxyCompactList}\item 
+bool \hyperlink{class_case_a9fdeaaa245f3af19ea057b93aa2b423d}{is\+Flag} ()
+\begin{DoxyCompactList}\small\item\em is\+Flag indicating if a case has a flag on it. \end{DoxyCompactList}\item 
+bool \hyperlink{class_case_a40789e3a7a8405f4dc8091d87ac25fd8}{is\+Bomb} ()
+\begin{DoxyCompactList}\small\item\em is\+Bomb indicating if a case has a bomb on it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_case_a6385233b74ac590eead57c153449dff9}\label{class_case_a6385233b74ac590eead57c153449dff9}} 
+void \hyperlink{class_case_a6385233b74ac590eead57c153449dff9}{unveil} ()
+\begin{DoxyCompactList}\small\item\em unveil unveil a case, set the attribute visible to true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_case_a97772ac6e7e0d7e1ad93ba9add4f5508}\label{class_case_a97772ac6e7e0d7e1ad93ba9add4f5508}} 
+void \hyperlink{class_case_a97772ac6e7e0d7e1ad93ba9add4f5508}{put\+Flag} ()
+\begin{DoxyCompactList}\small\item\em put\+Flag put a flag on a case. Set the attribute flag to true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_case_aa23ab498f5e079e41d04542dcf8227d6}\label{class_case_aa23ab498f5e079e41d04542dcf8227d6}} 
+void \hyperlink{class_case_aa23ab498f5e079e41d04542dcf8227d6}{remove\+Flag} ()
+\begin{DoxyCompactList}\small\item\em remove\+Flag remove the flag on a case. Set the attribute flag to false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_case_a19cc364d79982f30a6201e1624075d7f}\label{class_case_a19cc364d79982f30a6201e1624075d7f}} 
+void \hyperlink{class_case_a19cc364d79982f30a6201e1624075d7f}{put\+Bomb} ()
+\begin{DoxyCompactList}\small\item\em put\+Bomb put a bomb on a case. Set the attribute bomb to true. \end{DoxyCompactList}\item 
+void \hyperlink{class_case_ab1df4016a7477233809983dccd4b3efc}{set\+Content} (int content)
+\begin{DoxyCompactList}\small\item\em set\+Content set the content of a case. Calculates the number of bombs around the case and set the value to the case. \end{DoxyCompactList}\item 
+int \hyperlink{class_case_aa338c578e65412f867a89733c75863a7}{get\+Content} ()
+\begin{DoxyCompactList}\small\item\em get\+Content returns the content of a case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_case}{Case} class It represents a case of the board. 
+
+Definition at line 10 of file case.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_case_aa159b3687a5f33ef6ac7d461fa8bf948}\label{class_case_aa159b3687a5f33ef6ac7d461fa8bf948}} 
+\index{Case@{Case}!Case@{Case}}
+\index{Case@{Case}!Case@{Case}}
+\subsubsection{\texorpdfstring{Case()}{Case()}}
+{\footnotesize\ttfamily Case\+::\+Case (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coordinates}{Coordinates}}]{coordinates }\end{DoxyParamCaption})}
+
+
+
+The constructor It creates an instance of the class with predefined coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & the given coordinates. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file case.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_case_aa338c578e65412f867a89733c75863a7}\label{class_case_aa338c578e65412f867a89733c75863a7}} 
+\index{Case@{Case}!get\+Content@{get\+Content}}
+\index{get\+Content@{get\+Content}!Case@{Case}}
+\subsubsection{\texorpdfstring{get\+Content()}{getContent()}}
+{\footnotesize\ttfamily int Case\+::get\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Content returns the content of a case. 
+
+\begin{DoxyReturn}{Returns}
+an int representing the number of bombs that are around the case. 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file case.\+h.
+
+\mbox{\Hypertarget{class_case_a6a95d5189d914c65d7a4db0f007ff533}\label{class_case_a6a95d5189d914c65d7a4db0f007ff533}} 
+\index{Case@{Case}!get\+Coordinates@{get\+Coordinates}}
+\index{get\+Coordinates@{get\+Coordinates}!Case@{Case}}
+\subsubsection{\texorpdfstring{get\+Coordinates()}{getCoordinates()}}
+{\footnotesize\ttfamily \hyperlink{struct_coordinates}{Coordinates} \& Case\+::get\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the coordinates from the case 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_coordinates}{Coordinates} structure that contains tow int, a X and a Y. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file case.\+h.
+
+\mbox{\Hypertarget{class_case_a40789e3a7a8405f4dc8091d87ac25fd8}\label{class_case_a40789e3a7a8405f4dc8091d87ac25fd8}} 
+\index{Case@{Case}!is\+Bomb@{is\+Bomb}}
+\index{is\+Bomb@{is\+Bomb}!Case@{Case}}
+\subsubsection{\texorpdfstring{is\+Bomb()}{isBomb()}}
+{\footnotesize\ttfamily bool Case\+::is\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Bomb indicating if a case has a bomb on it. 
+
+\begin{DoxyReturn}{Returns}
+true if the case contains a bomb, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file case.\+h.
+
+\mbox{\Hypertarget{class_case_a9fdeaaa245f3af19ea057b93aa2b423d}\label{class_case_a9fdeaaa245f3af19ea057b93aa2b423d}} 
+\index{Case@{Case}!is\+Flag@{is\+Flag}}
+\index{is\+Flag@{is\+Flag}!Case@{Case}}
+\subsubsection{\texorpdfstring{is\+Flag()}{isFlag()}}
+{\footnotesize\ttfamily bool Case\+::is\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Flag indicating if a case has a flag on it. 
+
+\begin{DoxyReturn}{Returns}
+true if the case contains a flag, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file case.\+h.
+
+\mbox{\Hypertarget{class_case_a6bf64c2cc2b5ab1ee9f340dde607eda2}\label{class_case_a6bf64c2cc2b5ab1ee9f340dde607eda2}} 
+\index{Case@{Case}!is\+Visible@{is\+Visible}}
+\index{is\+Visible@{is\+Visible}!Case@{Case}}
+\subsubsection{\texorpdfstring{is\+Visible()}{isVisible()}}
+{\footnotesize\ttfamily bool Case\+::is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Visible indicating if a case is unveiled or not. 
+
+\begin{DoxyReturn}{Returns}
+true if the case is unveiled, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file case.\+h.
+
+\mbox{\Hypertarget{class_case_ab1df4016a7477233809983dccd4b3efc}\label{class_case_ab1df4016a7477233809983dccd4b3efc}} 
+\index{Case@{Case}!set\+Content@{set\+Content}}
+\index{set\+Content@{set\+Content}!Case@{Case}}
+\subsubsection{\texorpdfstring{set\+Content()}{setContent()}}
+{\footnotesize\ttfamily void Case\+::set\+Content (\begin{DoxyParamCaption}\item[{int}]{content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Content set the content of a case. Calculates the number of bombs around the case and set the value to the case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & an int value representing the number of bombs around the case. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 150 of file case.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/case.\+h\item 
+Application/case.\+cpp\end{DoxyCompactItemize}
